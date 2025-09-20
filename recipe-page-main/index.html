@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -17,11 +12,8 @@
         theme: {
           extend: {
             colors: {
-              stone100: "hsl(30, 54%, 90%)",
-              stone150: "hsl(30, 18%, 87%)",
-              stone600: "hsl(30, 10%, 34%)",
-              stone900: "hsl(24, 5%, 18%)",
               brown: "hsl(14, 45%, 36%)",
+              creme: "#fffdd0",
               rose800: "hsl(332, 51%, 32%)",
               rose50: "hsl(330, 100%, 98%)",
             },
@@ -33,16 +25,17 @@
         },
       };
     </script>
+
     <title>Frontend Mentor | Recipe page</title>
   </head>
-  <body class="h-screen w-screen font-outfit">
+  <body class="h-full w-full font-outfit">
     <div
-      class="bg-[url(./assets/images/image-omelette.jpeg)] h-48 bg-cover bg-no-repeat bg-center"
-    ></div>
-    <main class="px-5 py-5 text-gray-700 ">
-      <section class="">
+      class="bg-[url(./assets/images/image-omelette.jpeg)] h-48 bg-cover bg-no-repeat bg-center"></div>
+    <main class="px-5 py-5 text-gray-700">
+      <section
+        class="after:block after:h-px after:w-[100%] after:bg-gray-300 after:my-4">
         <h1 class="font-bold font-youg text-4xl">
-          Simple Omelette<br/>Recipe
+          Simple Omelette<br />Recipe
         </h1>
         <p class="py-5 text-xl">
           An easy and quick dish, perfect for any meal. This classic omelette
@@ -50,8 +43,8 @@
           choice of cheese, vegetables, or meats.
         </p>
         <div class="bg-rose50 p-5 rounded-md">
-          <h2 class=" text-rose800 text-xl">Preparation time</h2>
-          <ul class="list-disc pl-[5%] marker:text-rose800 [&_span]:text-gray-600 [&_span]:pl-4 [&_span]:font-bold [&_li]:text-xl [&_li]:py-1 ">
+          <h2 class="text-rose800 text-xl">Preparation time</h2>
+          <ul class="list-disc pl-[5%] marker:text-rose800 [&_span]:pl-4 [&_span]:font-bold [&_li]:text-xl [&_li]:py-1">
             <li><span>Total:</span> Approximately 10 minutes</li>
             <li><span>Preparation:</span> 5 minutes</li>
             <li><span>Cooking:</span> 5 minutes</li>
@@ -62,60 +55,77 @@
         <ul class="list-disc pl-[5%] marker:text-brown [&_li]:py-1 [&_li]:text-xl [&_li]:pl-4">
           <li>2-3 large eggs</li>
           <li>Salt, to taste</li>
-          <li> Pepper, to taste</li>
+          <li>Pepper, to taste</li>
           <li>1 tablespoon of butter or oil</li>
-          <li>Optional fillings: cheese, diced </li>
+          <li>Optional fillings: cheese, diced</li>
           <li>vegetables, cooked meats, herbs</li>
         </ul>
       </section>
+
+      <section class="after:block after:h-px after:w-[100%] after:bg-gray-300 after:my-4">
+        <h2 class="text-brown font-youg text-3xl my-4">Instructions</h2>
+        <ol class="[&_li]:w-full mx-7 list-decimal marker:text-brown marker:font-bold [&_li]:text-xl [&_li]:pl-3 [&_li]:my-2 [&_span]:font-bold">
+          <li>
+            <span>Beat the eggs:</span> In a bowl, beat the eggs with a pinch of
+            salt and pepper until they are well mixed. You can add a tablespoon
+            of water or milk for a fluffier texture.
+          </li>
+          <li>
+            <span>Heat the pan:</span> Place a non-stick frying pan over medium
+            heat and add butter or oil.
+          </li>
+          <li>
+            <span>Cook the omelette:</span> Once the butter is melted and
+            bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly
+            coat the surface.
+          </li>
+          <li>
+            <span>Add fillings (optional):</span> When the eggs begin to set at
+            the edges but are still slightly runny in the middle, sprinkle your
+            chosen fillings over one half of the omelette.
+          </li>
+          <li>
+            <span>Fold and serve:</span> As the omelette continues to cook,
+            carefully lift one edge and fold it over the fillings. Let it cook
+            for another minute, then slide it onto a plate.
+          </li>
+          <li>
+            <span>Enjoy:</span> Serve hot, with additional salt and pepper if
+            needed.
+          </li>
+        </ol>
+      </section>
+      <h2 class="text-brown font-youg text-3xl my-4">Nutrition</h2>
+      <p class="text-xl">
+        The table below shows nutritional values per serving without the
+        additional fillings.
+      </p>
+      <ul class="[&_li]:text-xl [&_div]:after:block [&_div]:after:h-px [&_div]:after:w-[100%] [&_div]:after:bg-gray-300 [&_div]:after:my-2 [&_li]:text-center my-3 [&_li]:flex [&_li]:justify-between [&_li]:w-[50%] [&_li]:m-auto">
+        <li>
+          <span class="font-medium">Calories</span>
+          <span class="font-bold text-brown .space-span">277kcal</span>
+        </li>
+        <div></div>
+        <li>
+          <span>Carbs</span>
+          <span class="font-bold text-brown">0g</span>
+        </li>
+        <div></div>
+        <li>
+          <span>Protein</span>
+          <span class="font-bold text-brown">20g</span>
+        </li>
+        <div></div>
+        <li>
+          <span>Fat</span>
+          <span class="font-bold text-brown">22g</span></li>
+        <div></div>
+      </ul>
+      <section></section>
     </main>
 
-    <!--
-  
-
- 
- 
-  
-
-  Instructions
-
-  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-  You can add a tablespoon of water or milk for a fluffier texture.
-
-  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
-
-  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-  the eggs evenly coat the surface.
-
-  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
-  middle, sprinkle your chosen fillings over one half of the omelette.
-
-  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
-  fillings. Let it cook for another minute, then slide it onto a plate.
-
-  Enjoy: Serve hot, with additional salt and pepper if needed.
-
-  Nutrition
-
-  The table below shows nutritional values per serving without the additional fillings.
-
-  Calories
-  277kcal
-
-  Carbs
-  0g
-
-  Protein
-  20g
-
-  Fat
-  22g-->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Jose</a>.
-    </div>
+    <footer class="text-xl m-auto w-full bg-brown text-white font-bold h-10 flex items-center justify-center m-[0px]">
+      <p>by code: <a class="text-creme" href="https://github.com/jose33-afk">Jose</a></p>
+    </footer>
   </body>
 </html>
