@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              stone100: "hsl(30, 54%, 90%)",
+              stone150: "hsl(30, 18%, 87%)",
+              stone600: "hsl(30, 10%, 34%)",
+              stone900: "hsl(24, 5%, 18%)",
+              brown: "hsl(14, 45%, 36%)",
+              rose800: "hsl(332, 51%, 32%)",
+              rose50: "hsl(330, 100%, 98%)",
+            },
+            fontFamily: {
+              youg: ["Young Serif", "serif"],
+              outfit: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | Recipe page</title>
+  </head>
+  <body class="h-screen w-screen font-outfit">
+    <div
+      class="bg-[url(./assets/images/image-omelette.jpeg)] h-48 bg-cover bg-no-repeat bg-center"
+    ></div>
+    <main class="px-5 py-5 text-gray-700 ">
+      <section class="">
+        <h1 class="font-bold font-youg text-4xl">
+          Simple Omelette<br/>Recipe
+        </h1>
+        <p class="py-5 text-xl">
+          An easy and quick dish, perfect for any meal. This classic omelette
+          combines beaten eggs cooked to perfection, optionally filled with your
+          choice of cheese, vegetables, or meats.
+        </p>
+        <div class="bg-rose50 p-5 rounded-md">
+          <h2 class=" text-rose800 text-xl">Preparation time</h2>
+          <ul class="list-disc pl-[5%] marker:text-rose800 [&_span]:text-gray-600 [&_span]:pl-4 [&_span]:font-bold [&_li]:text-xl [&_li]:py-1 ">
+            <li><span>Total:</span> Approximately 10 minutes</li>
+            <li><span>Preparation:</span> 5 minutes</li>
+            <li><span>Cooking:</span> 5 minutes</li>
+          </ul>
+        </div>
+
+        <h2 class="text-brown font-youg text-3xl my-4">Ingredients</h2>
+        <ul class="list-disc pl-[5%] marker:text-brown [&_li]:py-1 [&_li]:text-xl [&_li]:pl-4">
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li> Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced </li>
+          <li>vegetables, cooked meats, herbs</li>
+        </ul>
+      </section>
+    </main>
+
+    <!--
+  
+
+ 
+ 
+  
+
+  Instructions
+
+  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+  You can add a tablespoon of water or milk for a fluffier texture.
+
+  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
+
+  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+  the eggs evenly coat the surface.
+
+  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
+  middle, sprinkle your chosen fillings over one half of the omelette.
+
+  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
+  fillings. Let it cook for another minute, then slide it onto a plate.
+
+  Enjoy: Serve hot, with additional salt and pepper if needed.
+
+  Nutrition
+
+  The table below shows nutritional values per serving without the additional fillings.
+
+  Calories
+  277kcal
+
+  Carbs
+  0g
+
+  Protein
+  20g
+
+  Fat
+  22g-->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jose</a>.
+    </div>
+  </body>
+</html>
