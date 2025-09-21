@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Social links profile</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+     tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"]
+          },
+          colors: {
+            green: "hsl(75, 94%, 57%)",
+            grey700:"hsl(0, 0%, 20%)",
+            grey800:"hsl(0, 0%, 12%)",
+            grey900:"hsl(0, 0%, 8%)"
+          },
+          screens: {
+            largura: {min : "1024px"}
+          }
+        }
+      }
+     }
+   </script>
+</head>
+<body class="text-sm bg-grey900 h-screen w-full box-border flex justify-center items-center text-inter text-white">
+  <main class="
+  min-h-[75%] p-3 w-[400px]  lg:w-[40%] 2xl:max-w-[30%] bg-grey800 rounded-xl flex items-center flex-col transition-all duration-500 ease-in-out
+  ">
+      <div class="bg-[url(./assets/images/avatar-jessica.jpeg)] h-24 w-24 rounded-[50%] bg-center bg-cover my-7"></div>
+      <h1 class="text-2xl font-bold mt-2 mb-1">Jessica Randall</h1>
+      <h2 class="text-green text-base font-semibold mb-5">London, United Kingdom</h2>
+      <p class="text-base">"Front-end developer and avid reader."</p>
+
+      <nav class="
+        mt-5 w-full [&_li]:w-[90%] [&_li]:h-[55px] [&_li]:bg-grey700 [&_li]:m-auto
+        [&_li]:my-5 [&_li]:rounded-xl [&_li]:font-bold [&_li]:text-base [&_li]:flex [&_li]:justify-center [&_li]:items-center
+        
+      ">
+        <ul class="[&>li:hover]:bg-green [&>li:hover]:hover:text-black">
+          <li ><a href="#">GitHub</a></li>
+          <li><a href="#">Frontend Mentor</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </nav>
+  </main>
+</body>
+</html>
