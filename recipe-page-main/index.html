@@ -21,6 +21,9 @@
               youg: ["Young Serif", "serif"],
               outfit: ["Outfit", "sans-serif"],
             },
+            screens: {
+              minmedia: { min: "867px"}
+            }
           },
         },
       };
@@ -28,10 +31,11 @@
 
     <title>Frontend Mentor | Recipe page</title>
   </head>
-  <body class="h-full w-full font-outfit">
-    <div
-      class="bg-[url(./assets/images/image-omelette.jpeg)] h-48 bg-cover bg-no-repeat bg-center"></div>
-    <main class="px-5 py-5 text-gray-700">
+  <body class="h-full w-full font-outfit box-border flex items-center flex-col minmedia:bg-orange-50">
+    <div class="h-48 w-full max-w-2xl bg-white  minmedia:p-5 minmedia:h-80 minmedia:mt-[5%] minmedia:rounded-t-[15px]"> <!--w100% pra funciona max-->
+       <div class="w-full h-full bg-[url(./assets/images/image-omelette.jpeg)] bg-cover minmedia:rounded-lg"></div>
+    </div>
+    <main class="px-5 py-5 text-gray-700 max-w-2xl bg-white">   
       <section
         class="after:block after:h-px after:w-[100%] after:bg-gray-300 after:my-4">
         <h1 class="font-bold font-youg text-4xl">
@@ -100,7 +104,8 @@
         The table below shows nutritional values per serving without the
         additional fillings.
       </p>
-      <ul class="[&_li]:text-xl [&_div]:after:block [&_div]:after:h-px [&_div]:after:w-[100%] [&_div]:after:bg-gray-300 [&_div]:after:my-2 [&_li]:text-center my-3 [&_li]:flex [&_li]:justify-between [&_li]:w-[70%] [&_li]:m-auto">
+      <ul class="[&_li]:text-xl [&_div]:after:block [&_div]:after:h-px [&_div]:after:w-[100%] 
+      [&_div]:after:bg-gray-300 [&_div]:after:my-2 [&_li]:text-center my-3 [&_li]:flex [&_li]:justify-between [&_li]:w-[70%] [&_li]:m-auto">
         <li>
           <span class="font-medium">Calories</span>
           <span class="font-bold text-brown">277kcal</span>
@@ -124,7 +129,7 @@
       <section></section>
     </main>
 
-    <footer class="text-xl m-auto w-full bg-brown text-white font-bold h-10 flex items-center justify-center m-[0px]">
+    <footer class="text-xl m-auto w-full bg-brown text-white font-bold h-10 flex items-center justify-center m-[0px] max-w-2xl minmedia:mb-[5%] minmedia:rounded-b-[15px]">
       <p>by code: <a class="text-creme" href="https://github.com/jose33-afk">Jose</a></p>
     </footer>
   </body>
