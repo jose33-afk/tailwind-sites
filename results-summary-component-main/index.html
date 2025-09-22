@@ -17,18 +17,21 @@
               gradient1: "linear-gradient(to bottom, hsl(252, 100%, 67%),  hsl(241, 81%, 54%))",
               gradient2: "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.250) 70%)",
             },
+            screens: {
+              mediapsn: {min : "500px", max :"759px"}
+            }
           },
         },
       };
     </script>
  </head>
 <body class="
-h-screen w-full m-0 p-0 box-border font-hanken md:flex md:justify-center md:items-center bg-blue-100"
+h-screen w-full m-0 p-0 box-border font-hanken flex justify-center items-center bg-blue-100"
 >
     <main class="
      h-screen md:max-w-[50%] md:h-auto md:grid md:grid-cols-[1fr_1fr] md:grid-row-1 md:max-w-[90%] 
      lg:w-[70%] xl:w-[60%] 2xl:w-[50%] md:rounded-[35px] md:overflow-hidden bg-white transition-all
-     duration-200 ease-in-out shadow-lg" 
+     duration-200 ease-in-out shadow-lg mediapsn:w-[80%]" 
     >
       <section
         class="h-96 w-full bg-gradient1 rounded-b-[35px] flex items-center flex-col justify-center text-gray-300 font-medium pb-2 lg:col-start-1 lg:col-end-1 lg:row-start-1 lg:row-end-1 md:h-full md:rounded-[35px]" 
