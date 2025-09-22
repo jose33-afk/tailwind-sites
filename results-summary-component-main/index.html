@@ -1,105 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Results summary component</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            hanken: ["Hanken Grotesk", "sans-serif"]
-          }, 
-          backgroundImage: {
-            'gradient1': 'linear-gradient(to bottom, hsl(252, 100%, 67%),  hsl(241, 81%, 54%))',
-            'gradient2': 'linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.250) 70%)'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    section {
-      color: rgba(0, 0, 0, 0.663);
-    }
-  </style>
-</head>
-<body class="h-screen w-full m-0 p-0 box-border font-hanken">
-  <section class="
-  h-96 w-full bg-gradient1 rounded-b-[35px] flex items-center flex-col
-  justify-center text-gray-300 font-medium pb-2
-  ">
-    <h2 class="text-xl font-bold ">Your Result</h2>
-    <div class="
-    size-[40%] bg-gradient2 rounded-full flex justify-center items-center flex-col my-[20px]
-    ">
-      <h1 class="text-6xl font-bold text-white pb-2 ">76</h1>
-      <p class="text-slate-400">of 100</p>
-    </div>
-    <h2 class="text-2xl font-bold text-white mb-[10px]">Great</h2>
-    <p class="text-lg font-semibold max-w-[75%] text-justify">You scored higher than 65% of the people who have taken these tests.</p>
-  </section>
-  
-  <section>
-    <h2 class="font-bold text-2xl ml-[6%] mt-[5%]">Summary</h2>
-    <dl class="
-    [&_dt]:font-smedium [&_dd]:font-bold [&_dd]:text-gray-400 [&_dd>span]:text-gray-700 [&_dt>span]:size-[20px]
-    [&_dt>span]:bg-contain [&_dt>span]:block [&_dt]:flex [&_dt]:items-center [&_dt>span]:mr-[10px] [&_div]:text-xl [&_div]:flex [&_div]:justify-between [&_div]:py-[5%] [&_div]:px-[6%] [&_div]:my-[7%] [&_div]:rounded-xl max-w-[80%] m-auto mt-[6%]" 
-    > <!--Lista de definicoes my-15%-->
-      <div class="bg-rose-50">
-        <dt class="text-rose-600"> 
-          <span class="bg-[url(./assets/images/icon-reaction.svg)]"></span>
-          Reaction
-        </dt>
-        <dd>
-          <span>80</span>
-          / 100
-        </dd>
-      </div>
-      <div class="bg-yellow-50">
-        <dt class="text-yellow-500">
-          <span class="bg-[url(./assets/images/icon-memory.svg)]"></span>
-          Memory
-        </dt>
-        <dd>
-          <span>92</span>
-          / 100
-        </dd>
-      </div>
-      <div class="bg-emerald-50">
-        <dt class="text-emerald-500">
-          <span class="bg-[url(./assets/images/icon-verbal.svg)]"></span>
-          Verbal
-        </dt>
-        <dd>
-          <span>61</span>
-          / 100
-        </dd>
-      </div>
-      <div class="bg-indigo-50">
-        <dt class="text-indigo-700">
-          <span class="bg-[url(./assets/images/icon-visual.svg)]"></span>
-          Visual
-        </dt>
-        <dd>
-          <span>72</span>
-          / 100
-        </dd>
-      </div>
-    </dl>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
+    <title>Frontend Mentor | Results summary component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              hanken: ["Hanken Grotesk", "sans-serif"],
+            },
+            backgroundImage: {
+              gradient1: "linear-gradient(to bottom, hsl(252, 100%, 67%),  hsl(241, 81%, 54%))",
+              gradient2: "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.250) 70%)",
+            },
+          },
+        },
+      };
+    </script>
+ </head>
+<body class="
+h-screen w-full m-0 p-0 box-border font-hanken md:flex md:justify-center md:items-center bg-blue-100"
+>
+    <main class="
+     h-screen md:max-w-[50%] md:h-auto md:grid md:grid-cols-[1fr_1fr] md:grid-row-1 md:max-w-[90%] 
+     lg:w-[80%] xl:w-[70%] 2xl:w-[50%] md:rounded-[35px] md:overflow-hidden bg-white transition-all
+     duration-200 ease-in-out"
+    >
+      <section
+        class="h-96 w-full bg-gradient1 rounded-b-[35px] flex items-center flex-col justify-center text-gray-300 font-medium pb-2 lg:col-start-1 lg:col-end-1 lg:row-start-1 lg:row-end-1 md:h-full md:rounded-[35px]" 
+      >
+        <h2 class="text-xl font-bold">Your Result</h2>
+        <div
+          class="size-[9.5em] bg-gradient2 rounded-full flex justify-center items-center flex-col my-[20px] md:my-[10%]"
+        >
+          <h1 class="text-6xl font-bold text-white pb-2">76</h1>
+          <p class="text-slate-400">of 100</p>
+        </div>
+        <h2 class="text-2xl font-bold text-white mb-[10px]">Great</h2>
+        <p class="text-lg font-semibold max-w-[70%] text-justify md:text-center">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
 
-    <button class="
-      bg-slate-600 block m-auto text-white text-xl font-bold rounded-full h-[60px] w-[85%]
-      active:bg-gradient1 transition delay-10 duration-400 ease-in-out active::-translate-y-1 active:scale-110
-      ">
-    Continue
-  </button>
-  </section>
-  <div class="h-[20px]"></div>
-</body>
+      <section class="
+      lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-1 bg-white"
+      >
+        <h2 class="font-bold text-2xl ml-[11%] mt-[7%]">Summary</h2>
+        <dl
+          class="[&_dt]:font-smedium [&_dd]:font-bold [&_dd]:text-gray-400 [&_dd>span]:text-gray-700 [&_dt>span]:size-[20px] [&_dt>span]:bg-contain [&_dt>span]:block [&_dt]:flex [&_dt]:items-center [&_dt>span]:mr-[10px] [&_div]:text-xl [&_div]:flex [&_div]:justify-between [&_div]:py-[5%] [&_div]:px-[6%] [&_div]:my-[7%] [&_div]:rounded-xl max-w-[80%] m-auto mt-[6%]"
+        >
+          <!--Lista de definicoes my-15%-->
+          <div class="bg-rose-50">
+            <dt class="text-rose-600">
+              <span class="bg-[url(./assets/images/icon-reaction.svg)]"></span>
+              Reaction
+            </dt>
+            <dd>
+              <span>80</span>
+              / 100
+            </dd>
+          </div>
+          <div class="bg-yellow-50">
+            <dt class="text-yellow-500">
+              <span class="bg-[url(./assets/images/icon-memory.svg)]"></span>
+              Memory
+            </dt>
+            <dd>
+              <span>92</span>
+              / 100
+            </dd>
+          </div>
+          <div class="bg-emerald-50">
+            <dt class="text-emerald-500">
+              <span class="bg-[url(./assets/images/icon-verbal.svg)]"></span>
+              Verbal
+            </dt>
+            <dd>
+              <span>61</span>
+              / 100
+            </dd>
+          </div>
+          <div class="bg-indigo-50">
+            <dt class="text-indigo-700">
+              <span class="bg-[url(./assets/images/icon-visual.svg)]"></span>
+              Visual
+            </dt>
+            <dd>
+              <span>72</span>
+              / 100
+            </dd>
+          </div>
+        </dl>
+
+        <button
+          class="bg-slate-600 block m-auto text-white text-xl font-bold rounded-full h-[60px] w-[85%] active:bg-gradient1 transition delay-10 duration-400 ease-in-out active::-translate-y-1 active:scale-110"
+        >
+          Continue
+        </button>
+        <div class="h-[20px] bg-white"></div>
+      </section>
+    </main>
+  </body>
 </html>
 <!--
    bg-[linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,0.350)_70%)]
