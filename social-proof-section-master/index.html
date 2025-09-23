@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,26 +16,31 @@
             colors: {
               darkMagenta: "hsl(300, 43%, 22%)",
               grayishMagenta: "hsl(333, 80%, 67%)"
+            },
+            screens: {
+              mediaprsl: {min : "500px", max : "768px"}
             }
           }
         }
       }
     </script>
   </head>
-  <body class="box-border text-darkMagenta font-semibold m-0 p-0 h-screen w-full ">
-    <main class="
-      flex flex-col
+  <body class="
+    text-darkMagenta font-semibold h-screen
+  "> <!--Se já tem h-screen, o w-screen pode causar overflow horizontal-->
+    <main class=" 
+      flex flex-col md:grid md:grid-cols-2 md:grid-rows-[auto-auto] h-full w-full gap-y-[1%] 
     ">
       <section class="
-        flex items-center flex-col
+        flex items-center justify-center flex-col md:row-start-1 md:row-end-2
       ">
         <h1 class="
-          text-3xl text-center font-bold max-w-[60%] mt-[15%]
+          text-3xl text-center font-bold max-w-[60%] mt-[15%] md:mt-0
         ">
           10,000+ of our users love our products.
         </h1>
         <p class="
-           text-center max-w-[85%] text-gray-500 mt-[5%]
+           text-center max-w-[85%] text-gray-500 mt-[5%] lg:max-w-[60%] 2xl:max-w-[50%] mediaprsl:max-w-[60%]
          ">
            We only provide great products combined with excellent customer service.
            See what our satisfied customers are saying about our services.
@@ -43,31 +48,34 @@
       </section>
 
       <section class="
-        h-auto w-full my-7 [&_span]:bg-[url(./images/icon-star.svg)] [&_span]:bg-contain [&_span]:block 
-        [&_span]:h-[20px] [&_span]:w-[105px] [&_div]:flex [&_div]:flex-col [&_div]:items-center [&_div]:my-3
+        w-full my-7 [&_span]:bg-[url(./images/icon-star.svg)] [&_span]:bg-contain [&_span]:block 
+        [&_span]:h-[20px] [&_span]:w-[105px] [&_div]:flex [&_div]:flex-col [&_div]:items-center
         [&_div]:gap-[5px] [&_div]:w-[90%] [&_div]:m-auto [&_div]:bg-fuchsia-50 [&_div]:p-2 [&_div]:rounded-lg
+        md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 mediaprsl:[&_div]:w-[65%] lg:[&_div]:w-[400px] 
+        md:[&_div]:mx-0 md:self-center
       ">
         <div>
           <span></span>
           <p>Rated 5 Stars in Reviews</p>
         </div>
-        <div>
+        <div class="lg:!ml-12 !my-4">
           <span></span>
           <p>Rated 5 Stars in Report Guru</p>
         </div>
-        <div>
+        <div class="xl:!ml-20"> <!---20 == 80px-->
           <span></span>
           <p>Rated 5 Stars in BestTech</p>
         </div>
       </section>
 
       <section class="
-        text-white [&_div]:w-full [&_div]:flex [&_div]:items-center [&_div]:text-base [&_div]:mb-3 [&_div]:mt-2 
-        [&_div]:gap-[30px] [&_article]:rounded-lg [&_article]:h-[270px] [&_article]:my-5 [&_article]:bg-darkMagenta
-        [&_article]:w-[90%]  [&_article]:m-auto [&_article]:p-5 [&_div>div]:bg-cover [&_div>div]:h-[55px] 
-        [&_div>div]:w-[55px] [&_div>div]:rounded-full [&_span]:text-grayishMagenta
-      ">
-        <article>
+        text-white w-full pb-9 [&_div]:w-full [&_div]:flex [&_div]:items-center [&_div]:text-base [&_div]:mb-3 
+        [&_div]:mt-2 [&_div]:gap-[30px] [&_article]:rounded-lg [&_article]:h-[270px] [&_article]:my-5 
+        [&_article]:bg-darkMagenta [&_article]:w-[90%]  [&_article]:mx-auto [&_article]:p-5 [&_div>div]:bg-cover 
+        [&_div>div]:h-[55px] [&_div>div]:w-[55px] [&_div>div]:rounded-full [&_span]:text-grayishMagenta md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3 md:[&_article]:basis-[450px] md:flex md:flex-wrap 
+        mediaprsl:[&_article]:w-[65%] md:[&_article]:mx-[1%] md:justify-center
+      "> 
+        <article class="xl:!mt-1">
           <div>
             <div class="bg-[url(./images/image-colton.jpg)]"></div>
             <h2>
@@ -82,7 +90,7 @@
             </p>
         </article>
 
-        <article>
+        <article class="xl:!mt-4">
           <div>
             <div class="bg-[url(./images/image-irene.jpg)]"></div>
             <h2>
@@ -96,7 +104,7 @@
             </p>
         </article>
 
-        <article>
+        <article class="xl:!mt-8">
           <div>
             <div class="bg-[url(./images/image-anne.jpg)]"></div>
             <h2>
@@ -109,7 +117,6 @@
               standard. Will definitely use them again and recommend them to everyone!"
             </p>
         </article>
-        <div class="h-[35px] w-full"></div>
       </section>
     </main>
   </body>

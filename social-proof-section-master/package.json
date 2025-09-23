@@ -1,0 +1,25 @@
+{
+  "name": "social-proof-section-master",
+  "version": "1.0.0",
+  "description": "👉 [**Clique para visitar o site**](https://jose33-afk.github.io/tailwind-sites/social-proof-section-master/index.html) *** ![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)",
+  "homepage": "https://github.com/jose33-afk/tailwind-sites#readme",
+  "bugs": {
+    "url": "https://github.com/jose33-afk/tailwind-sites/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jose33-afk/tailwind-sites.git"
+  },
+  "license": "ISC",
+  "author": "jose33-afk",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "4.1.13",
+    "tailwindcss": "4.1.13"
+  },
+  "devDependencies": {}
+}
