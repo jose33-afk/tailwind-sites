@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* Configurações customizadas */
+@theme {
+  --font-legueSpartan: "League Spartan", sans-serif;
+  --color-darkMagenta: hsl(300, 43%, 22%); /*color-NOME: valor;*/
+  --color-grayishMagenta: hsl(333, 80%, 67%);
+}
+
+@layer components {
+  .star-rating {
+    @apply bg-[url('../images/icon-star.svg')] bg-contain block
+    h-[20px] w-[105px];
+  }
+
+  .rating-card {
+    @apply flex flex-col items-center gap-[5px] m-auto bg-fuchsia-50 p-2 rounded-lg w-[340px];
+    @apply sm:w-[55%] md:w-[320px] lg:w-[400px] md:mx-0 md:self-center;
+  }
+
+  .card-comm-artc {
+    @apply h-[270px] rounded-lg my-5 bg-darkMagenta w-[340px]  mx-auto p-5;
+    @apply sm:w-[55%] md:basis-[450px] md:mx-[1%];
+  }
+
+  .card-comm-contain {
+    @apply w-full h-[75px] flex items-center text-base mb-3 mt-2 gap-[30px];
+  }
+
+  .card-comm-perfil {
+    @apply bg-[url(../images/image-colton.jpg)] bg-cover size-[55px] rounded-full;
+  }
+
+  .card-comm-perfil-anne {
+    @apply bg-[url(../images/image-anne.jpg)];
+  }
+
+  .card-comm-perfil-irene {
+    @apply bg-[url(../images/image-irene.jpg)];
+  }
+}

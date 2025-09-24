@@ -3,119 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./imagesfavicon-32x32.png"/>
     <title>Frontend Mentor | Social proof section</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              legueSpartan: ["League Spartan", "sans-serif"]
-            },
-            colors: {
-              darkMagenta: "hsl(300, 43%, 22%)",
-              grayishMagenta: "hsl(333, 80%, 67%)"
-            },
-            screens: {
-              mediaprsl: {min : "500px", max : "768px"}
-            }
-          }
-        }
-      }
-    </script>
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
-  <body class="
-    text-darkMagenta font-semibold h-screen
-  "> <!--Se já tem h-screen, o w-screen pode causar overflow horizontal-->
-    <main class=" 
-      flex flex-col md:grid md:grid-cols-2 md:grid-rows-[auto-auto] h-full w-full gap-y-[1%] 
-    ">
-      <section class="
-        flex items-center justify-center flex-col md:row-start-1 md:row-end-2
-      ">
-        <h1 class="
-          text-3xl text-center font-bold max-w-[60%] mt-[15%] md:mt-0
-        ">
+  <body class="text-darkMagenta font-semibold h-screen">
+    <!--Se já tem h-screen, o w-screen pode causar overflow horizontal-->
+    <main
+      class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-[auto-auto] h-full w-full gap-y-[1%]"
+    >
+      <section
+        class="flex items-center justify-center flex-col md:row-start-1 md:row-end-2"
+      >
+        <h1 class="text-3xl text-center font-bold max-w-[60%] mt-[15%] md:mt-0">
           10,000+ of our users love our products.
         </h1>
-        <p class="
-           text-center max-w-[85%] text-gray-500 mt-[5%] lg:max-w-[60%] 2xl:max-w-[50%] mediaprsl:max-w-[60%]
-         ">
-           We only provide great products combined with excellent customer service.
-           See what our satisfied customers are saying about our services.
+        <p
+          class="text-center max-w-[70%] text-gray-500 mt-[5%] lg:max-w-[60%] 2xl:max-w-[50%] sm:max-w-[60%]"
+        >
+          We only provide great products combined with excellent customer
+          service. See what our satisfied customers are saying about our
+          services.
         </p>
       </section>
 
-      <section class="
-        w-full my-7 [&_span]:bg-[url(./images/icon-star.svg)] [&_span]:bg-contain [&_span]:block 
-        [&_span]:h-[20px] [&_span]:w-[105px] [&_div]:flex [&_div]:flex-col [&_div]:items-center
-        [&_div]:gap-[5px] [&_div]:w-[90%] [&_div]:m-auto [&_div]:bg-fuchsia-50 [&_div]:p-2 [&_div]:rounded-lg
-        md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 mediaprsl:[&_div]:w-[65%] lg:[&_div]:w-[400px] 
-        md:[&_div]:mx-0 md:self-center
-      ">
-        <div>
-          <span></span>
+      <section
+        class="w-full my-7 m-auto md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3
+        self-center"
+      >
+        <div class="rating-card">
+          <span class="star-rating"></span>
           <p>Rated 5 Stars in Reviews</p>
         </div>
-        <div class="lg:!ml-12 !my-4">
-          <span></span>
+        <div class="lg:ml-12 !my-4 rating-card">
+          <span class="star-rating"></span>
           <p>Rated 5 Stars in Report Guru</p>
         </div>
-        <div class="xl:!ml-20"> <!---20 == 80px-->
-          <span></span>
+        <div class="xl:ml-20 rating-card">
+          <!---20 == 80px-->
+          <span class="star-rating"></span>
           <p>Rated 5 Stars in BestTech</p>
         </div>
       </section>
 
-      <section class="
-        text-white w-full pb-9 [&_div]:w-full [&_div]:flex [&_div]:items-center [&_div]:text-base [&_div]:mb-3 
-        [&_div]:mt-2 [&_div]:gap-[30px] [&_article]:rounded-lg [&_article]:h-[270px] [&_article]:my-5 
-        [&_article]:bg-darkMagenta [&_article]:w-[90%]  [&_article]:mx-auto [&_article]:p-5 [&_div>div]:bg-cover 
-        [&_div>div]:h-[55px] [&_div>div]:w-[55px] [&_div>div]:rounded-full [&_span]:text-grayishMagenta md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3 md:[&_article]:basis-[450px] md:flex md:flex-wrap 
-        mediaprsl:[&_article]:w-[65%] md:[&_article]:mx-[1%] md:justify-center
-      "> 
-        <article class="xl:!mt-1">
-          <div>
-            <div class="bg-[url(./images/image-colton.jpg)]"></div>
+      <section
+        class="text-white w-full pb-9 [&_span]:text-grayishMagenta 
+        md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-3 md:flex md:flex-wrap md:justify-center"
+      >
+        <article class="xl:mt-1 card-comm-artc">
+          <div class="card-comm-contain">
+            <div class="card-comm-perfil"></div>
             <h2>
-              Colton Smith<br>
+              Colton Smith<br />
               <span>Verified Buyer</span>
             </h2>
-          </div>  
-            <p> 
-              "We needed the same printed design as the one we had ordered a week prior.
-              Not only did they find the original order, but we also received it in time.
-              Excellent!"
-            </p>
+          </div>
+          <p>
+            "We needed the same printed design as the one we had ordered a week
+            prior. Not only did they find the original order, but we also
+            received it in time. Excellent!"
+          </p>
         </article>
 
-        <article class="xl:!mt-4">
-          <div>
-            <div class="bg-[url(./images/image-irene.jpg)]"></div>
+        <article class="xl:mt-4 card-comm-artc">
+          <div class="card-comm-contain">
+            <div class="card-comm-perfil card-comm-perfil-irene"></div>
             <h2>
-              Irene Roberts<br>
+              Irene Roberts<br />
               <span>Verified Buyer</span>
             </h2>
-          </div>  
-            <p> 
-              "Customer service is always excellent and very quick turn around. Completely
-              delighted with the simplicity of the purchase and the speed of delivery."
-            </p>
+          </div>
+          <p>
+            "Customer service is always excellent and very quick turn around.
+            Completely delighted with the simplicity of the purchase and the
+            speed of delivery."
+          </p>
         </article>
 
-        <article class="xl:!mt-8">
-          <div>
-            <div class="bg-[url(./images/image-anne.jpg)]"></div>
+        <article class="xl:mt-8 card-comm-artc">
+          <div class="card-comm-contain">
+            <div class="card-comm-perfil card-comm-perfil-anne"></div>
             <h2>
-              Anne Wallace<br>
+              Anne Wallace<br />
               <span>Verified Buyer</span>
             </h2>
-          </div>  
-            <p> 
-              "Put an order with this company and can only praise them for the very high
-              standard. Will definitely use them again and recommend them to everyone!"
-            </p>
+          </div>
+          <p>
+            "Put an order with this company and can only praise them for the
+            very high standard. Will definitely use them again and recommend
+            them to everyone!"
+          </p>
         </article>
       </section>
     </main>
