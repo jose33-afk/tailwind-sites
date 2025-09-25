@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
   <link rel="stylesheet" href="./src/css/style.css">
   <title>Frontend Mentor | Four card feature section</title>
@@ -11,54 +11,65 @@
   h-screen text-gray-500 text-base flex flex-col
   items-center bg-azul-claro 
 "> 
-  <header class=" 
-    w-full p-2 text-center 
-  ">
-    <h1 class="font-light text-[23px] w-auto mt-8">    
+  <header class="w-full p-2 text-center">
+    <h1 class="
+     font-light text-[23px] w-auto 
+     mt-8 lg:text-1xl xl:text-3xl
+    ">    
       Reliable, efficient delivery<br>
       <span class="font-bold">Powered by Technology</span>  
     </h1>
     <p class="
-      text-center w-[73%] text-sm mx-auto mb-8 mt-4      
+      text-center w-[73%] text-sm mx-auto mb-8 mt-4 
+      sm:w-[60%] md:text-lg md:w-[42%] lg:w-[30%]  
     ">  
       Our Artificial Intelligence powered tools use millions of project data points 
       to ensure that your project is successful
     </p>
   </header>
 
-  <main class="
-    w-full flex flex-col items-center
-  "> <!-- grid de 3 colunas e o resto e com justify e align-->
-    <article class="cards">
+  <main class="contain"> 
+    <article class="
+      cards col-start-1 col-end-1 lg:justify-self-end
+    ">
       <strong>Supervisor</strong>
       <p>
         Monitors activity to identify project roadblocks
       </p>
-      <div class="img-super"></div>
+      <div class="img-super" aria-hidden="true"></div>
     </article>
 
-    <article class="cards before:bg-rose-500" before="rose">   
+    <article class="
+      cards before:bg-rose-500 col-start-2 col-end-2
+      lg:mb-76
+    ">   
       <strong>Team Builder</strong>
       <p>
         Scans our talent network to create the optimal team for your project
       </p>
-      <div class="img-team"></div> 
+      <div class="img-team" aria-hidden="true"></div><!--leitores de tela ignorarem-->
     </article>   
 
-    <article class="cards before:bg-yellow-500" before="rose">    
+    <article class="
+      cards before:bg-yellow-500 col-start-2 col-end-2
+      lg:mt-76
+    ">    
       <strong>Karma</strong>
       <p>
         Regularly evaluates our talent to ensure quality
       </p>
-      <div class="img-karma"></div> 
+      <div class="img-karma" aria-hidden="true"></div> 
     </article> 
 
-    <article class="cards before:bg-blue-400 mb-9">  
+    <article class="
+      cards before:bg-blue-400 col-start-3 col-end-3
+      lg:justify-self-start
+    ">  
       <strong>Calculator</strong>
       <p>
         Uses data from past projects to provide better delivery estimates
       </p>
-      <div class="img-calcu"></div> 
+      <div class="img-calcu" aria-hidden="true"></div> 
     </article> 
   </main>     
 </body>

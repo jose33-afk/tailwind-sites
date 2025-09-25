@@ -6,12 +6,28 @@
 }
 
 @layer components {
+  .contain {
+    @apply
+      w-full flex flex-col items-center  pb-8
+    ;
+
+    @apply 
+     lg:h-full lg:grid lg:grid-cols-[1fr_auto_1fr] 
+     lg:grid-rows-1 lg:gap-4
+    ;
+  }
+
   .cards {
     @apply 
      h-64 bg-white rounded-lg shadow-lg overflow-hidden 
      grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-2
-     p-[8%] w-[80%] relative text-sm my-4
+     p-[30px] w-[300px] relative text-sm my-4 
     ; 
+
+    @apply 
+     sm:w-[400px] sm:h-72 lg:m-0 lg:row-start-1 lg:row-end-1
+     lg:w-[30vw]  xl:w-[24vw] 2xl:w-[20vw]
+    ;
   }
 
   .cards::before {
@@ -24,18 +40,20 @@
   .cards > strong {
     @apply 
       row-start-1 row-end-2 self-start
-       
+      lg:text-lg
     ;
   }
+
   .cards > p {
     @apply 
-     row-start-2 row-end-2
+     row-start-2 
     ;
   }
 
   .cards > div {
     @apply 
-      size-20 bg-no-repeat bg-contain row-start-3 row-end-3 place-self-end
+      size-20 bg-no-repeat bg-contain row-start-3 
+      place-self-end
     ;
   }
 
