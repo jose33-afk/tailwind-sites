@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bevietnan: "Be Vietnam Pro", sans-serif;
+  --color-bg-button:  rgba(251, 128, 75, 0.597);
+}
+
+@layer components {
+  .reset-all {
+    all: unset;
+  }
+
+  .bg-prsnl {
+    @apply bg-[url(../img/bg-simplify-section-mobile.svg)];
+  }
+
+  .conf-sections {
+    @apply
+      flex flex-col items-center
+    ;
+  }
+
+  .bnt-start {
+    @apply
+      h-5 w-24 p-2 bg-orange-500 text-center text-xs font-semibold text-white
+      rounded-full shadow-lg shadow-red-300/50 mt-7
+    ;
+  }
+
+  .bnt-start:hover {
+     @apply
+     lg:bg-bg-button
+     ;
+  }
+
+  .bnt-start:active {
+    @apply 
+      bg-bg-button transition-transform duration-150 ease-linear
+      -translate-y-1
+    ;
+  }
+  
+  /*Sections 01, 02..*/
+  .text-areas {
+    @apply my-2;
+  }
+
+  .text-areas > div{
+    @apply 
+      flex gap-2 bg-rose-50 my-2
+    ;
+  }
+  
+   .text-areas  h3{
+    @apply 
+      font-bold text-blue-950
+    ;
+   }
+
+  .text-areas  p{
+    @apply w-[95%];
+  }
+
+  .icon-num {
+    @apply 
+      bg-orange-500 text-white text-center font-semibold w-13 h-7 rounded-full pt-[2px]
+    ;
+  }
+
+  /*comentarios*/
+  .commts-contain h2 {
+    @apply text-blue-950 text-xl font-bold;
+  }
+
+  .commts-contain > div {
+    @apply 
+     mt-10 mb-9 overflow-x-auto flex space-x-5
+     w-[90%]
+    ;
+  }
+
+  .commits-contain__item {
+    @apply w-full shrink-0;
+  }
+
+  .commits-contain__item > p {
+    @apply text-base text-center w-[85%];
+  }
+
+  .commits-contain__item > img {
+    @apply size-13 my-2;
+  }
+
+ .commits-contain__item > strong {
+    @apply font-semibold  text-blue-950 my-2;
+  }
+
+}
+

@@ -1,0 +1,27 @@
+{
+  "name": "manage-landing-page-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Manage landing page coding challenge](preview.jpg)",
+  "homepage": "https://github.com/jose33-afk/tailwind-sites/tree/main#readme",
+  "bugs": {
+    "url": "https://github.com/jose33-afk/tailwind-sites/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jose33-afk/tailwind-sites.git#main"
+  },
+  "license": "ISC",
+  "author": "jose33-afk",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/style.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/style.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "4.1.13",
+    "tailwindcss": "4.1.13"
+  },
+  "devDependencies": {}
+}
