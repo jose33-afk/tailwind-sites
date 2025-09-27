@@ -9,6 +9,18 @@
   .reset-all {
     all: unset;
   }
+  
+  .menu {
+    @apply 
+     absolute top-[80px] bg-white w-[80vw] h-70 shadow-lg 
+     left-1/2 -translate-x-1/2 flex flex-col justify-center items-center
+     font-bold text-blue-950
+    ;
+  }
+ 
+  .menu li {
+    @apply my-5 w-20;
+  }
 
   .bg-prsnl {
     @apply bg-[url(../img/bg-simplify-section-mobile.svg)];
