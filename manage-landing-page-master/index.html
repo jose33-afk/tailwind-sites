@@ -13,13 +13,32 @@
   flex flex-col items-center bg-prsnl bg-slate-50 
 ">
   <header class="
-    flex justify-between items-center my-4 h-[60px] w-[90%] relative
+    flex justify-between items-center my-4 h-[60px] w-[80%] relative
   ">
     <img src="./src/img/logo.svg" alt="logo-site" class="
       h-5 object-contain
     ">
+    <!--pc-->
+    <nav class="hidden lg:block">
+      <ul class="
+        flex gap-7 text-blue-950 font-bold
+      ">
+        <li><a href="#">menu </a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+    </nav>
+
+    <button class="
+      reset-all bnt-start hidden lg:block lg:mt-0
+     ">
+      Get Started
+    </button>
+    <!---->
     <button id="bnt-menu" class="
-      h-5 reset-all 
+      h-5 reset-all lg:hidden
     " >
       <img src="./src/img/icon-hamburger.svg" alt="botao-menu" class="
         bnt-amburg-img
@@ -39,34 +58,46 @@
     </nav>
   </header>
 
-  <main class="
-    h-full w-full px-4 conf-sections
-  "> 
+  <main class="contain-principal"> 
     <img src="./src/img/illustration-intro.svg" alt="ilustracao-grafica" class="
-      object-cover w-[90%] 
+      object-cover w-[90%] lg:col-start-2 lg:size-[33vw] xl:size-[23vw] lg:justify-self-end
     ">
 
-    <section class="conf-sections">
-      <h1 class="text-3xl text-center font-bold w-[90%] my-3  text-blue-950">
+    <section class="
+     conf-sections lg:col-end-2 lg:row-start-1 
+     lg:row-end-2 lg:w-[80%] lg:items-start
+    ">
+      <h1 class="
+        text-3xl text-center font-bold w-[90%] 
+        my-3 text-blue-950 lg:text-left xl:w-[80%]
+      ">
         Bring everyone together to build better products.
       </h1>
-      <p class="text-center text-base w-[80%]">
+      <p class="
+        text-center text-base w-[80%] lg:text-left 
+        xl:w-[60%]
+      ">
         Manage makes it simple for software teams to plan day-to-day 
         tasks while keeping the larger team goals in view.
       </p>
-      <button class="reset-all bnt-start">
+      <button class="reset-all bnt-start ">
         Get Started
       </button>
     </section>
 
-    <section class="conf-sections my-14">
+    <section class="
+     conf-sections my-14 lg:place-self-start lg:m-0
+     lg:mt-1 lg:items-start
+    ">
       <h2 class="
         text-xl text-center text-blue-950 font-bold w-[60%] mb-2
+        lg:text-left lg:text-2xl
       ">
         What’s different about Manage?
       </h2>
       <p class="
-        text-center text-base w-[90%]
+        text-center text-base w-[90%] lg:text-left
+        lg:w-[60%]
       ">
         Manage provides all the functionality your team needs, without 
         the complexity. Our software is tailor-made for modern digital 
@@ -74,12 +105,12 @@
       </p>
     </section>
 
-    <section> <!--01, 02.. grid-->
+    <section class="
+      lg:justify-self-end lg:w-[33vw] xl:w-[23vw]
+    "> <!--01, 02.. grid-->
       <section class="text-areas">
-        <div>
-          <div class="icon-num">01</div>
-          <h3>Track company-wide progress</h3>
-        </div>
+        <div class="icon-num">01</div>
+        <h3>Track company-wide progress</h3>
         <p> 
           See how your day-to-day tasks fit into the wider vision. Go from 
           tracking progress at the milestone level all the way done to the 
@@ -88,10 +119,8 @@
       </section>
 
       <section class="text-areas my-8">
-        <div>
-          <div class="icon-num">02</div>
-          <h3>Advanced built-in reports</h3>
-        </div>
+        <div class="icon-num">02</div>
+        <h3>Advanced built-in reports</h3>
         <p>
           Set internal delivery estimates and track progress toward company 
           goals. Our customisable dashboard helps you build out the reports 
@@ -100,10 +129,8 @@
       </section>
 
       <section class="text-areas">
-        <div>
-          <div class="icon-num">03</div>
-          <h3>Everything you need in one place</h3>
-        </div>
+        <div class="icon-num">03</div>
+        <h3>Everything you need in one place</h3>
         <p>
           Stop jumping from one service to another to communicate, store files, 
           track tasks and share documents. Manage offers an all-in-one team 
@@ -112,7 +139,7 @@
       </section>
     </section>
 
-    <aside class="conf-sections commts-contain w-full my-9">
+    <aside class="conf-sections commts-contain">
       <h2>What they’ve said</h2>
 
       <div>
@@ -144,7 +171,7 @@
           </p>
         </div>
 
-        <div class="commits-contain__item conf-sections">
+        <div class="commits-contain__item conf-sections lg:hidden">
           <img src="./src/img/avatar-shanai.png" alt="">
           <strong>Shanai Gough</strong>
           <p>       
@@ -155,7 +182,7 @@
       </div>
 
       <div class="
-        m-auto w-20 container-dots
+        m-auto w-20 container-dots lg:hidden
       ">
           <span class="dot active"></span>
           <span class="dot"></span>
@@ -167,22 +194,24 @@
         Get Started
       </button>  
     </aside>
+  </main>
 
-    <section class="
-      conf-sections h-63 mt-2 w-[100vw]
+  <section class="
+    conf-sections h-63 mt-2 w-[100vw]
     bg-orange-500 justify-center bg-img-slogan
     "> <!--Slogan-->
-      <strong class="
-        text-3xl text-white text-center w-[90%]  font-bold
-      ">Simplify how your team works today.</strong>
-      <button class="
-       reset-all bnt-start bg-white text-orange-500
-       hover:text-orange-300 active:text-orange-300 shadow-black-shadow
+    <strong class="
+      text-3xl text-white text-center w-[90%]  font-bold
+    ">
+      Simplify how your team works today.
+    </strong>
+    <button class="
+      reset-all bnt-start bg-white text-orange-500
+    hover:text-orange-300 active:text-orange-300 shadow-black-shadow
       ">
-        Get Started
-      </button>  
-    </section>
-  </main>
+      Get Started
+    </button>  
+  </section>
 
   <footer class="style-footer conf-sections">
     <form class="my-9 h-[8%] flex items-center gap-1">

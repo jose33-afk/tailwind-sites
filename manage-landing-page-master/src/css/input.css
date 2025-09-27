@@ -25,7 +25,14 @@
   .bg-pernl {
     @apply bg-[url()];
   }
-  
+
+  .contain-principal {
+    @apply
+     h-full w-full px-4 flex flex-col items-center
+     lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-y-14 lg:mt-8 lg:justify-items-start lg:w-[80%] lg:p-0
+    ;
+  }
+
   .menu {
     @apply 
      absolute top-[80px] bg-white w-[80vw] h-68 shadow-lg 
@@ -68,34 +75,42 @@
   }
   
   /*Sections 01, 02..*/
-  .text-areas > div{
-    @apply flex gap-2 bg-rose-50 my-2;
+  .text-areas {
+    @apply 
+      grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] 
+      gap-2
+    ;
   }
-  
-   .text-areas  h3 {
-     @apply font-bold text-blue-950;
+
+  .text-areas h3 {
+     @apply font-bold text-blue-950 col-start-2;
    }
 
-  .text-areas p { 
-    @apply w-[95%];
+  .text-areas p {
+    @apply col-span-full lg:col-start-2;
   }
 
   .icon-num {
     @apply 
       bg-orange-500 text-white text-center font-semibold 
-      w-13 h-7 rounded-full pt-[2px]
+      w-13 h-7 rounded-full pt-[2px] 
     ;
   }
 
   /*comentarios*/
+  .commts-contain {
+    @apply 
+      w-full my-9 lg:row-start-3 lg:col-span-full
+    ;
+  }
+
   .commts-contain h2 {
     @apply text-blue-950 text-xl font-bold;
   }
 
   .commts-contain > div {
     @apply 
-     mt-10 mb-9 overflow-x-auto flex space-x-5
-     w-full 
+     mt-10 mb-9 overflow-x-auto flex space-x-5 w-full lg:overflow-x-hidden  lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:w-full
     ;
     scrollbar-width: none;
   }
