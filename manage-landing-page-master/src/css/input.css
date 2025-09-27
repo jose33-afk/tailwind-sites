@@ -75,8 +75,11 @@
   .commts-contain > div {
     @apply 
      mt-10 mb-9 overflow-x-auto flex space-x-5
-     w-[90%]
+     w-full 
     ;
+
+    scrollbar-width: none;
+    
   }
 
   .commits-contain__item {
@@ -95,5 +98,14 @@
     @apply font-semibold  text-blue-950 my-2;
   }
 
+  .dot {
+    @apply 
+      size-2 rounded-full border-1 border-orange-500 cursor-pointer transition-colors mx-1
+    ;
+   }    
+
+  .dot.active {
+    @apply bg-orange-500;
+  }
 }
 
