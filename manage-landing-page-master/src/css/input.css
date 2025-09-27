@@ -68,10 +68,6 @@
   }
   
   /*Sections 01, 02..*/
-  .text-areas {
-    @apply my-2;
-  }
-
   .text-areas > div{
     @apply flex gap-2 bg-rose-50 my-2;
   }
