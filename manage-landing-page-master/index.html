@@ -18,12 +18,20 @@
     <img src="./src/img/logo.svg" alt="logo-site" class="
       h-5 object-contain
     ">
-    <!--pc-->
-    <nav class="hidden lg:block">
-      <ul class="
-        flex gap-7 text-blue-950 font-bold
+
+    <button id="bnt-menu" class="
+      h-5 reset-all lg:hidden
+    " >
+      <img src="./src/img/icon-hamburger.svg" alt="botao-menu" class="
+        bnt-amburg-img
       ">
-        <li><a href="#">menu </a></li>
+    </button>
+
+    <nav class="menu transition-all duration-300">
+      <ul class="
+         lg:flex lg:gap-7 lg:h-full lg:w-full
+      ">
+        <li><a href="#">menu</a></li>
         <li><a href="#">Product</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Careers</a></li>
@@ -33,29 +41,10 @@
 
     <button class="
       reset-all bnt-start hidden lg:block lg:mt-0
-     ">
+     "> <!--pc-->
       Get Started
     </button>
-    <!---->
-    <button id="bnt-menu" class="
-      h-5 reset-all lg:hidden
-    " >
-      <img src="./src/img/icon-hamburger.svg" alt="botao-menu" class="
-        bnt-amburg-img
-      ">
-    </button>
 
-    <nav class="menu
-      opacity-0 invisible transition-all duration-300
-    ">
-      <ul>
-        <li><a href="#">menu </a></li>
-        <li><a href="#">Product</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Community</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main class="contain-principal"> 

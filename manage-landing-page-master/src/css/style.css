@@ -307,9 +307,6 @@
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
-  .gap-7 {
-    gap: calc(var(--spacing) * 7);
-  }
   .bg-orange-500 {
     background-color: var(--color-orange-500);
   }
@@ -442,6 +439,11 @@
       display: block;
     }
   }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
@@ -451,6 +453,11 @@
     @media (width >= 64rem) {
       width: 33vw;
       height: 33vw;
+    }
+  }
+  .lg\:h-full {
+    @media (width >= 64rem) {
+      height: 100%;
     }
   }
   .lg\:w-\[33vw\] {
@@ -468,9 +475,19 @@
       width: 80%;
     }
   }
+  .lg\:w-full {
+    @media (width >= 64rem) {
+      width: 100%;
+    }
+  }
   .lg\:items-start {
     @media (width >= 64rem) {
       align-items: flex-start;
+    }
+  }
+  .lg\:gap-7 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 7);
     }
   }
   .lg\:place-self-start {
@@ -569,6 +586,7 @@
     }
   }
   .menu {
+    visibility: hidden;
     position: absolute;
     top: 80px;
     left: calc(1/2 * 100%);
@@ -584,12 +602,42 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-blue-950);
+    opacity: 0%;
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    @media (width >= 64rem) {
+      visibility: visible;
+    }
+    @media (width >= 64rem) {
+      position: static;
+    }
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 6);
+    }
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 110);
+    }
+    @media (width >= 64rem) {
+      --tw-translate-x: calc(var(--spacing) * 0);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+    @media (width >= 64rem) {
+      background-color: var(--color-slate-50);
+    }
+    @media (width >= 64rem) {
+      opacity: 100%;
+    }
+    @media (width >= 64rem) {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
   }
   .menu li {
     margin-block: calc(var(--spacing) * 5);
-    width: calc(var(--spacing) * 20);
+    width: auto;
+    @media (width >= 64rem) {
+      margin: calc(var(--spacing) * 0);
+    }
   }
   .conf-sections {
     display: flex;
