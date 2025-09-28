@@ -4,6 +4,7 @@
   --font-bevietnan: "Be Vietnam Pro", sans-serif;
   --color-bg-button:  rgba(251, 128, 75, 0.597);
   --color-black-shadow: rgba(0, 0, 0, 0.125);
+  --color-hover-menu: ;
 }
 
 @layer utilities {
@@ -33,19 +34,22 @@
      lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-y-14 lg:mt-8 lg:justify-items-start lg:p-0 lg:text-sm lg:w-[80%] xl:w-[60%] 
     ;
   }
+  
   .menu {
     @apply 
      absolute top-[80px] bg-white w-[80vw] h-68 shadow-lg 
      left-1/2 -translate-x-1/2 flex flex-col justify-center 
      items-center font-bold text-blue-950 opacity-0 invisible
 
-     lg:visible lg:opacity-100 lg:w-110 lg:h-6 lg:shadow-none 
-     lg:translate-x-0 lg:static lg:bg-slate-50
+     lg:visible lg:opacity-100 lg:w-110 lg:h-6 lg:shadow-none lg:translate-x-0 lg:static lg:bg-slate-50
     ;
+    
   }
   
   .menu li {
-    @apply my-5 w-auto lg:m-0;
+    @apply 
+     my-5 w-auto lg:m-0 lg:hover:text-indigo-200
+    ;
   }
 
   .contain-principal__titulo {
@@ -148,18 +152,29 @@
   /*Slogan*/
   .contain-principal__slogan {
     @apply 
-      h-63 mt-2 w-[100vw] bg-orange-500 justify-center
+      h-63 mt-2 w-full bg-orange-500 justify-center
       bg-[url(../img/bg-simplify-section-mobile.svg)] bg-no-repeat
       flex flex-col items-center
 
-      lg:bg-[url(../img/bg-simplify-section-desktop.svg)] lg:flex-row
-      lg:justify-between
+      lg:bg-[url(../img/bg-simplify-section-desktop.svg)] lg:flex-row lg:justify-between lg:h-50
     ;
   }
 
   /*footer*/
   .style-footer {
-    @apply h-110 bg-slate-950 w-screen;
+    @apply 
+      h-110 bg-slate-950 w-full
+      lg:grid lg:grid-cols-3 lg:grid-rows-1
+      lg:justify-items-center lg:h-60
+      ;
+  }
+
+  .formulario {
+    @apply 
+     my-9 h-[8%] flex items-center gap-1
+     col-start-3 col-end-4 lg:row-span-full
+     lg:self-start lg:mt-11 lg:h-[13%]
+    ;
   }
 
   #input-email {
@@ -175,7 +190,9 @@
   }
 
   .links{
-    @apply flex justify-between w-[65%];
+    @apply 
+     flex justify-between w-[65%] col-start-2 col-end-3 lg:w-[80%] lg:text-base lg:mb-15 2xl:w-100
+    ;
   }
 
   .links a{
@@ -186,7 +203,11 @@
   }
 
   .nav-social {
-    @apply flex w-[80vw] h-6 justify-evenly my-9;
+    @apply 
+     flex w-[80vw] h-6 justify-evenly my-9 col-start-1
+     col-end-2 lg:w-[80%] lg:row-span-full lg:self-end
+     lg:mb-13 xl:w-90
+     ;
   }
  
   .nav-social img{
