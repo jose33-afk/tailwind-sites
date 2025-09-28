@@ -29,10 +29,10 @@
   .contain-principal {
     @apply
      h-full w-full px-4 flex flex-col items-center
-     lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-y-14 lg:mt-8 lg:justify-items-start lg:w-[80%] lg:p-0
+     
+     lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-y-14 lg:mt-8 lg:justify-items-start lg:p-0 lg:text-sm lg:w-[80%] xl:w-[60%] 
     ;
   }
-
   .menu {
     @apply 
      absolute top-[80px] bg-white w-[80vw] h-68 shadow-lg 
@@ -48,15 +48,16 @@
     @apply my-5 w-auto lg:m-0;
   }
 
-  .conf-sections {
-    @apply flex flex-col items-center;
+  .contain-principal__titulo {
+    @apply
+      text-3xl text-center font-bold w-[90%] 
+      my-3 text-blue-950 lg:text-left 
+      lg:w-90 
+    ;
   }
 
-  .bg-img-slogan {
-    @apply 
-     bg-[url(../img/bg-simplify-section-mobile.svg)]
-     bg-no-repeat
-     ;
+  .conf-sections {
+    @apply flex flex-col items-center;
   }
 
   .bnt-start {
@@ -108,7 +109,7 @@
   }
 
   .commts-contain h2 {
-    @apply text-blue-950 text-xl font-bold;
+    @apply text-blue-950 text-xl font-bold lg:text-2xl;
   }
 
   .commts-contain > div {
@@ -143,6 +144,17 @@
 
   .dot.active {
     @apply bg-orange-500;
+  }
+  /*Slogan*/
+  .contain-principal__slogan {
+    @apply 
+      h-63 mt-2 w-[100vw] bg-orange-500 justify-center
+      bg-[url(../img/bg-simplify-section-mobile.svg)] bg-no-repeat
+      flex flex-col items-center
+
+      lg:bg-[url(../img/bg-simplify-section-desktop.svg)] lg:flex-row
+      lg:justify-between
+    ;
   }
 
   /*footer*/
