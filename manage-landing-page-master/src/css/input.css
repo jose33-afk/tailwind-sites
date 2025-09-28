@@ -31,7 +31,23 @@
     @apply
      h-full w-full px-4 flex flex-col items-center
      
+     sm:px-[10%]
      lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:gap-y-14 lg:mt-8 lg:justify-items-start lg:p-0 lg:text-sm lg:w-[80%] xl:w-[60%] 
+    ;
+  }
+
+  .contain-principal__img {
+    @apply 
+      object-cover w-83 sm:w-90
+      lg:col-start-2 lg:size-[33vw] xl:size-[23vw] lg:justify-self-end 
+    ;
+  }
+
+   .contain-principal__titulo {
+    @apply
+      text-3xl text-center font-bold w-80 
+      my-3 text-blue-950 md:w-90 lg:text-left 
+      lg:w-90 
     ;
   }
   
@@ -49,14 +65,6 @@
   .menu li {
     @apply 
      my-5 w-auto lg:m-0 lg:hover:text-indigo-200
-    ;
-  }
-
-  .contain-principal__titulo {
-    @apply
-      text-3xl text-center font-bold w-[90%] 
-      my-3 text-blue-950 lg:text-left 
-      lg:w-90 
     ;
   }
 
@@ -95,7 +103,7 @@
    }
 
   .text-areas p {
-    @apply col-span-full lg:col-start-2;
+    @apply col-span-full lg:col-start-2 w-83 sm:w-90;
   }
 
   .icon-num {
@@ -108,7 +116,7 @@
   /*comentarios*/
   .commts-contain {
     @apply 
-      w-full my-9 lg:row-start-3 lg:col-span-full
+      w-full my-9 lg:row-start-3 lg:col-span-full 
     ;
   }
 
@@ -128,7 +136,7 @@
   }
 
   .commits-contain__item > p {
-    @apply text-base text-center w-[85%];
+    @apply text-base text-center w-80 sm:w-[70%];
   }
 
   .commits-contain__item > img {
@@ -156,7 +164,7 @@
       bg-[url(../img/bg-simplify-section-mobile.svg)] bg-no-repeat
       flex flex-col items-center
 
-      lg:bg-[url(../img/bg-simplify-section-desktop.svg)] lg:flex-row lg:justify-between lg:h-50
+      md:bg-[url(../img/bg-simplify-section-desktop.svg)] md:flex-row md:justify-between md:h-50
     ;
   }
 
@@ -164,16 +172,17 @@
   .style-footer {
     @apply 
       h-110 bg-slate-950 w-full
-      lg:grid lg:grid-cols-3 lg:grid-rows-1
-      lg:justify-items-center lg:h-60
+      md:grid md:grid-cols-3 md:grid-rows-1
+      md:justify-items-center md:h-60
       ;
   }
 
   .formulario {
     @apply 
-     my-9 h-[8%] flex items-center gap-1
-     col-start-3 col-end-4 lg:row-span-full
-     lg:self-start lg:mt-11 lg:h-[13%]
+     my-9 h-[8%] flex items-center gap-1 justify-center
+     md:col-start-3 md:col-end-4 md:row-span-full
+     md:self-start md:mt-11 md:w-[85%]
+     md:h-[13%] lg:w-70
     ;
   }
 
@@ -181,7 +190,8 @@
     @apply 
     bg-white rounded-full h-full border-transparent
       border-2 lg:hover:border-orange-500 text-center m-0
-    focus:border-orange-500 focus:caret-amber-500    
+    focus:border-orange-500 focus:caret-amber-500 
+      md:w-[85%]
     ;
   }
 
@@ -191,7 +201,8 @@
 
   .links{
     @apply 
-     flex justify-between w-[65%] col-start-2 col-end-3 lg:w-[80%] lg:text-base lg:mb-15 2xl:w-100
+     flex justify-between w-60 md:col-start-2 md:col-end-3 
+     lg:w-[80%] lg:text-base md:mb-15 2xl:w-100 sm:w-70 md:w-[80%]
     ;
   }
 
@@ -204,9 +215,10 @@
 
   .nav-social {
     @apply 
-     flex w-[80vw] h-6 justify-evenly my-9 col-start-1
-     col-end-2 lg:w-[80%] lg:row-span-full lg:self-end
-     lg:mb-13 xl:w-90
+     flex w-80 h-6 justify-evenly my-9 
+     
+     md:col-start-1 md:col-end-2 md:w-50 lg:w-[80%] 
+     md:row-span-full md:self-end md:mb-13 xl:w-90
      ;
   }
  
